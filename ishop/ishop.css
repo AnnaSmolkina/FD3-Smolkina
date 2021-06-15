@@ -1,0 +1,34 @@
+.ishop
+{
+  border: double gray 3px;
+  width: 440px;
+  min-height: 200px ;
+  padding: 3px 7px;
+  background-color: #F0F0F0;
+}
+
+.ishop .ishop__Name
+{
+  font-weight: bold;
+  text-align: center;
+}
+
+.ishop .ishop__Products
+{
+  padding-top: 5px;
+  vertical-align: middle;
+
+}
+
+.ishop .ishop__Products .ishop__Product
+{
+  padding: 5px;
+  margin: 10px;
+  float: left;
+  width: 40%;
+  height: 150px;
+  font-weight: bold;
+  text-align: right;
+  background-color: aqua;
+}
+
