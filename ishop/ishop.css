@@ -1,8 +1,8 @@
 .ishop
 {
   border: double gray 3px;
-  width: 440px;
-  min-height: 200px ;
+  width: 800px;
+  min-height: 100px ;
   padding: 3px 7px;
   background-color: #F0F0F0;
 }
@@ -24,11 +24,42 @@
 {
   padding: 5px;
   margin: 10px;
+  width: 98%;
+  min-height: 25px;
+  font-weight: bold;
+  text-align: left;
+  background-color: rgb(41, 179, 179);
+ 
+   }
+.ishop .ishop__Products .ishop__Product .PRODUCT
+{
+  float: left;
+  width: 15%;
+  font-weight: bold;
+  text-align: left;
+   
+}
+.ishop .ishop__Products .ishop__Product .PRICE
+{
+  float: left;
+  width: 15%;
+  font-weight: bold;
+  text-align: left;
+  
+}
+.ishop .ishop__Products .ishop__Product .URL
+{
   float: left;
   width: 40%;
-  height: 150px;
   font-weight: bold;
-  text-align: right;
-  background-color: rgb(41, 179, 179);
+  text-align: left;
+  
 }
-
+.ishop .ishop__Products .ishop__Product .FREE
+{
+  float: left;
+  width: 28%;
+  font-weight: bold;
+  text-align: left;
+  
+}
