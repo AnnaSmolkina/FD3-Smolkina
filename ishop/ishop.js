@@ -20,11 +20,11 @@ var ishop=React.createClass ( {
    render: function () {
     var productList=this.props.products.map ( v=>
            React.DOM.div({key:v.code, className:'ishop__Product'}, 
-            React.DOM.span (v.url),
-            React.DOM.span (v.text, v.nameProduct),
-            React.DOM.span (v.text, v.price),
-            React.DOM.span (v.text, v.free),
-           ),
+            React.DOM.span ({className:'PRODUCT'}, v.nameProduct),
+            React.DOM.span ({className: 'PRICE'},  v.price),
+            React.DOM.span ({className:'URL'}, v.url),
+            React.DOM.span ({className: 'FREE'},  v.free),
+            ),
           );
         
         return React.DOM.div ({className:'ishop'},
