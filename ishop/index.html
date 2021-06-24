@@ -17,18 +17,19 @@
    
     var nameShopText="СТЕЛЛАЖ";
     var productsArray=[
-      [
-        {text:"Наименование", nameProduct:"Война и мир",  code:"ishop__Product_1"},
-        {text:"Цена, руб.", price: "25"},
-        {url: "images/war.jpg"},
-        {text:"Осталось на складе, шт.", free: "5"}, 
-      ],
-      [
-        {text:"Наименование", nameProduct:"Анна Каренина",  code:"ishop__Product_2"},
-        {text:"Цена, руб.", price: "25"},
-        {url: "images/anna.jpg"} ,
-        {text:"Осталось на складе, шт.", free: "5"}, 
-      ],
+       { 
+         nameProduct:"Война и мир",  
+         code:1, 
+         price: "Цена, руб.: 22", 
+         url: 'https://oz.by/books/more10877602.html', 
+         free:"Осталось на складе, шт.: 10" 
+        },
+       {
+          nameProduct:"Анна Каренина",  
+          code:2, price:"Цена, руб.: 25",
+          url: 'https://oz.by/books/more10275829.html', 
+          free:"Осталось на складе, шт.: 8"
+          },
     ];
 
     ReactDOM.render (
