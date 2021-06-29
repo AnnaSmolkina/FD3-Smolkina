@@ -3,10 +3,22 @@
 <head> 
   <meta charset="utf-8" />
   <title>Рамка</title>
-  <link rel="stylesheet" type="text/css" href="bundle.css">
+  <link rel="stylesheet" type="text/css" href="RainbowFrame.css">
 </head> 
 <body> 
   <div id="container"></div> 
-  <script src="bundle.js"></script>
+  <script src="RainbowFrame.js"></script>
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+  <script> 
+   
+  
+
+    ReactDOM.render (
+        React.createElement(RainbowFrame, {colors: color,}),
+        document.getElementById('container')
+    );
+
+    </script>
 </body> 
 </html>
