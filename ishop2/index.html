@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>Стеллаж</title>
+</head> 
+<body> 
+  <div id="container"></div> 
+      
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src="ishop2.js"></script>
+  <link rel="stylesheet" type="text/css" href="ishop2.css" />
+
+  <script> 
+   
+    var shopArray=[
+        {text: "Name", text: "Price", text: "URL", text: "Quantity", text: "Control"},
+        ["product_1", "product_2", "product_3", "product_4", "product_5", "product_6"]
+    ];
+    var productsArray=[
+       { 
+         name:"product_1",  
+         code:1, 
+         price: 22, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 10 
+        },
+       
+        { 
+         name:"product_2",  
+         code:2, 
+         price: 18, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 15 
+        },
+
+        { 
+         name:"product_3",  
+         code:3, 
+         price: 30, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 5 
+        },
+
+        { 
+         name:"product_4",  
+         code:4, 
+         price: 26, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 8 
+        },
+
+        { 
+         name:"product_5",  
+         code: 5, 
+         price: 35, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 12 
+        },
+
+        { 
+         name:"product_6",  
+         code: 6, 
+         price: 22, 
+         url: 'https://oz.by/books/more10877602.html', 
+         quantity: 3 
+        },
+
+    ];
+
+    ReactDOM.render (
+        React.createElement(ishop2, { shop: shopArray, products: productsArray}),
+        document.getElementById('container')
+    );
+
+    </script>
+</body>
+</html>
