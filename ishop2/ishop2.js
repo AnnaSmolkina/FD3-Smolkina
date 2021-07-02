@@ -1,17 +1,8 @@
 var ishop2=React.createClass ( {
     displayName: "ishop2",
     propTypes: {
-        shop: React.PropTypes.array.isRequired,
-        /*
-        shop: React.PropTypes.arrayOf (
-            React.propTypes.shape ({
-                text: React.PropTypes.string.isRequired;
-            })
-        )
-        */
-
-        products: React.PropTypes.array.isRequired,
-        /*
+        workMode: React.PropTypes.number.isRequired,
+        top: React.PropTypes.string.isRequired,
         products: React.PropTypes.arrayOf (
             React.PropTypes.shape ({
                 name: React.PropTypes.string.isRequired,
@@ -19,24 +10,43 @@ var ishop2=React.createClass ( {
                 price:React.PropTypes.number.isRequired,
                 url: React.PropTypes.string.isRequired,
                 quantity: React.PropTypes.number,
-             })
+            })
         )
-        */
     },
 
-   render: function () {
-    var productList=this.props.products.map ( v=>
-           React.DOM.div({key:v.code, className:'ishop__Product'}, 
-            React.DOM.span ({className:'PRODUCT'}, v.nameProduct),
-            React.DOM.span ({className: 'PRICE'},  v.price),
-            React.DOM.span ({className:'URL'}, v.url),
-            React.DOM.span ({className: 'FREE'},  v.free),
+     getInitialState: function () {
+         return {setectedProductCode: null};  
+     },
+
+
+    render: function () {
+        var productRow=this.props.products.map ( v=>
+            React.createElement(ishop2, {key:v.code,
+             name:v.name, code:v.code, price:v.price, url:v.url, quantity:v.quantity,
+             workMode:this.props.workMode }, 
             ),
           );
+
+        var headTableRow=this.props.top.map( v=>
+            React.createElement(ishop2, {key:x.code, 
+            text1: v.text1, text2: v.text2, text3: v.text3. text4: v.text4},
+            ),
+          );
+       
         
-        return React.DOM.div ({className:'ishop'},
-            React.DOM.div( {className:'ishop__Name'}, this.props.nameShop ),
-            React.DOM.div( {className: 'ishop__Products'}, productList ),
-        );
+        return React.DOM.div ({className:'ISHOP2'},
+                React.DOM.tr ( {className:'ISHOP2__TOP'},
+                   React.DOM.td (null, x.text1),
+                   React.DOM.td (null, x.text2),
+                   React.DOM.td (null, x.text3),
+                   React.DOM.td (null, x.text4)
+                 )
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT1', v.code}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT2', v.code}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT3', v.code}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT4', v.code}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT5', v.code}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT6', v.code}, productRow) ,
+             );
       },
     });
