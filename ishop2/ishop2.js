@@ -1,8 +1,7 @@
 var ishop2=React.createClass ( {
     displayName: "ishop2",
     propTypes: {
-        workMode: React.PropTypes.number.isRequired,
-        top: React.PropTypes.string.isRequired,
+        top: React.PropTypes.array,
         products: React.PropTypes.arrayOf (
             React.PropTypes.shape ({
                 name: React.PropTypes.string.isRequired,
@@ -27,26 +26,20 @@ var ishop2=React.createClass ( {
             ),
           );
 
-        var headTableRow=this.props.top.map( v=>
-            React.createElement(ishop2, {key:x.code, 
-            text1: v.text1, text2: v.text2, text3: v.text3. text4: v.text4},
+        var headTableRow=this.props.top.map( x=>
+            React.createElement(ishop2, {key:x.code, text1: x.text1, text2:x.text2, text3:x.text3, text4: x.text4},
             ),
           );
        
         
         return React.DOM.div ({className:'ISHOP2'},
-                React.DOM.tr ( {className:'ISHOP2__TOP'},
-                   React.DOM.td (null, x.text1),
-                   React.DOM.td (null, x.text2),
-                   React.DOM.td (null, x.text3),
-                   React.DOM.td (null, x.text4)
-                 )
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT1', v.code}, productRow) ,
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT2', v.code}, productRow) ,
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT3', v.code}, productRow) ,
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT4', v.code}, productRow) ,
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT5', v.code}, productRow) ,
-                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT6', v.code}, productRow) ,
+                React.DOM.tr ( {className:'ISHOP2__TOP'}, headTableRow),
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT1'}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT2'}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT3'}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT4'}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT5'}, productRow) ,
+                React.DOM.tr ({className: 'ISHOP2__PRODUCTLIST_PRODUCT6'}, productRow) ,
              );
       },
     });
