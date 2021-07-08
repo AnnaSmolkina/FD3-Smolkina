@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 
 import './RainbowFrame.css';
+
 let colors=['yellow', 'blue', 'red', 'green', 'grey', 'purple', 'orange'];
 
 class RainbowFrame extends React.Component {
@@ -14,10 +15,8 @@ class RainbowFrame extends React.Component {
   render() {
         let code=this.props.children;
         this.props.colors.forEach (color => 
-            <div style={{border:"solid 1px "+this.props.color,padding:"10px"}} >
-              {code}
-                Hello! My name is Anna.
-            </div>
+           code= <div style={{border:"solid 1px "+this.props.colors,padding:"10px"}}>={code}
+                </div>
          );
          return code;
         
