@@ -1,0 +1,10 @@
+.ISHOP2
+{
+    width: 500px;
+    height: 500px;
+    background-color: light-grey;
+}
+.ISHOP2__TABLE_TOP
+{
+font-weight: bold;
+}
