@@ -1,10 +1,34 @@
 .ISHOP2
 {
-    width: 500px;
-    height: 500px;
-    background-color: light-grey;
+    width: 550px;
+    
+    
 }
+
 .ISHOP2__TABLE_TOP
 {
 font-weight: bold;
+background-color: grey;
+}
+
+.NAME
+{
+width: 100px;
+text-align: left;
+
+}
+.PRICE
+{
+    width: 50px;
+    text-align: left;
+}
+.URL
+{
+    width: 270px;
+    text-align: left;
+}
+.QUANTITY
+{
+    width:80px;
+    text-align: left;
 }
