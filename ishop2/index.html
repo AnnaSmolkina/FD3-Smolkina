@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="ishop2.css" />
 
   <script> 
-    var headTable= [{code:0, text1:"Name", text2:"Price", text3:"URL",text4:"QUANTITY"}];
+    var headTable= [{code:0, text1:"Name", text2:"Price", text3:"URL",text4:"QUANTITY", text5: "CONTROL"}];
     var productsList=[
         { 
          name:"product_1",  
@@ -67,7 +67,7 @@
     ];
 
     ReactDOM.render (
-        React.createElement( ishop2,{head: headTable, products:productsList}),
+        React.createElement( ishop2,{head: headTable, products:productsList,  workMode:1}),
         document.getElementById('container')
     );
 
