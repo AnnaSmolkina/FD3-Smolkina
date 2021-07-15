@@ -14,15 +14,8 @@ var filter=React.createClass ( {
     
     render: function () {
         var wordsFilterList=this.props.words.map(w =>
-                React.DOM.tr ({key:ht.code, className:'HAED'},
-                    React.DOM.th ({className:'NAME'}, ht.text1 ),
-                    React.DOM.th ({className:"PRICE"}, ht.text2 ),
-                    React.DOM.th ({className:"URL"}, ht.text3),
-                    React.DOM.th ({className:"QUANTITY"}, ht.text4),
-                    React.DOM.th ({className:"CONTROL"}, ht.text5),
-                )
-        );
-
+                React.createElement (FilterList, {words: w.words})
+        )
         var productRow=this.props.products.map(v  => 
                 React.DOM.tr ( {key: v.code, className: 'ISHOP2__PRODUCTLIST_PRODUCT'},
                    React.DOM.td ({className:'NAME'}, v.name),
