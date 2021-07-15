@@ -41,7 +41,18 @@ var ishop2=React.createClass ( {
 
 
     render: function () {
-        var headRow=this.props.head.map(ht=>
+            var productRow=this.props.products.map(v  => 
+                React.createElement (ProductsGrid, {key: v.code, 
+                name:v.name, price:v.price, url:v.url, quantity:v.quantity, 
+                control:v.control,
+                cbSelected:this.productSelected,
+                selectedProductCode:this.state.selectedProductCode,
+                workMode:this.props.workMode,
+                }
+                )
+            );
+
+            var headRow=this.props.head.map(ht=>
                 React.DOM.tr ({key:ht.code, className:'HAED'},
                     React.DOM.th ({className:'NAME'}, ht.text1 ),
                     React.DOM.th ({className:"PRICE"}, ht.text2 ),
@@ -51,27 +62,13 @@ var ishop2=React.createClass ( {
                 )
         );
 
-        var productRow=this.props.products.map(v  => 
-                React.DOM.tr ( {key: v.code, className: 'ISHOP2__PRODUCTLIST_PRODUCT'},
-                   React.DOM.td ({className:'NAME'}, v.name),
-                   React.DOM.td ({className:"PRICE"}, v.price),
-                   React.DOM.td ({ className:"URL"}, v.url),
-                   React.DOM.td ({ className:"QUANTITY"}, v.quantity),
-                   React.DOM.td ({className:"CONTROL"},
-                      React.DOM.input ({type: "button", value: "Delete"}),
-                   )
-                )
-             );
 
-        
-                    
-                          
+            
         return React.DOM.div ({className:'ISHOP2'},
                React.DOM.table ({className:'ISHOP2__TABLE'},
-                  React.DOM.thead ({className:"ISHOP2__TABLE_TOP"}, headRow ),
+                  React.DOM.thead ({className:"ISHOP2__TABLE_TOP"}, headRow),
                   React.DOM.tbody ({className:"ISHOP2__TABLE_BODY"}, productRow),
-                 )
-            
+               )        
         );
       },
     
