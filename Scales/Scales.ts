@@ -56,11 +56,23 @@ class Tomatos extends Product {
 }
 
 let redApples: Apples = new Apples ("red apples", 5);
+let greenApples: Apples= new Apples ("green apples", 10);
+let redTomatos: Tomatos=new Tomatos ("red tomatos", 8);
+let yellowTomatos: Tomatos= new Tomatos ("yellow tomatos", 12);
 
 redApples.getName();
 redApples.getScale();
-console.log (redApples);
+greenApples.getName();
+greenApples.getScale();
+redTomatos.getName();
+redTomatos.getScale();
+yellowTomatos.getName();
+yellowTomatos.getScale();
 
-let greedApples: Apples= new Apples ("green apples", 10);
-let redTomatos: Tomatos=new Tomatos ("red tomatos", 8);
-let yellowTomatos: Tomatos= new Tomatos ("yellow tomatos", 12);
+let scales1:Scales= new Scales ();
+scales1.add(redApples);
+scales1.add(greenApples);
+scales1.add(redTomatos);
+scales1.add(yellowTomatos);
+console.log (scales1.getSumScale());
+console.log (scales1.getNameList());
