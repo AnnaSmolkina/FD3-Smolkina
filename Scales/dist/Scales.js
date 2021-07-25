@@ -28,33 +28,32 @@ var Scales = /** @class */ (function () {
     function Scales() {
         this.products = [];
     }
-    Scales.prototype.add = function (product) {
-        return product;
+    Scales.prototype.add = function (_product) {
+        this.products.push(_product);
     };
     Scales.prototype.getSumScale = function () {
-        return sum;
-        productScale;
+        var summ = 0;
+        this.products.forEach(function (_product) { summ += _product.getScale(); });
     };
     Scales.prototype.getNameList = function () {
-        return productName;
+        var namePr = "";
+        this.products.forEach(function (_product) { namePr += _product.getNameList(); });
     };
     return Scales;
 }());
 var Apple = /** @class */ (function (_super) {
     __extends(Apple, _super);
-    function Apple(_productName, _productScale) {
-        var _this = _super.call(this) || this;
-        _this.name = "Apple";
-        _this.scale = 5;
-        _this.name = _productName;
-        _this.scale = _productScale;
-        return _this;
+    function Apple() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Apple.prototype.getName = function () {
-        _super.prototype.getName.call(this);
-        console.log(this.getName);
-    };
     return Apple;
+}(Product));
+var Tomatos = /** @class */ (function (_super) {
+    __extends(Tomatos, _super);
+    function Tomatos() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Tomatos;
 }(Product));
 
 //# sourceMappingURL=Scales.js.map

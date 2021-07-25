@@ -31,24 +31,36 @@ class Scales {
     getSumScale (): number {
         let summ: number=0;
         this.products.forEach (
-            _product=> {summ+ = _product.getScale()}
+            _product=> {summ+=_product.getScale()}
         )
+        return summ;
     }
 
     getNameList () :string {
         let namePr: string="";
         this.products.forEach (
-            _product=> {namePr+=_product.getNameList()}
+            _product=> {namePr+=_product.getName()}
         )
+        return namePr;
     }
 
 
 }
 
-class Apple extends Product {
+class Apples extends Product {
    
 }
 
 class Tomatos extends Product {
     
 }
+
+let redApples: Apples = new Apples ("red apples", 5);
+
+redApples.getName();
+redApples.getScale();
+console.log (redApples);
+
+let greedApples: Apples= new Apples ("green apples", 10);
+let redTomatos: Tomatos=new Tomatos ("red tomatos", 8);
+let yellowTomatos: Tomatos= new Tomatos ("yellow tomatos", 12);
