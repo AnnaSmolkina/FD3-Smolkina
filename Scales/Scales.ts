@@ -31,17 +31,17 @@ class Scales {
     getSumScale (): number {
         let summ: number=0;
         this.products.forEach (
-            _product=> {summ+=_product.getScale()}
+            _product => {summ+=_product.getScale()}
         )
-        return summ;
+        return summ
     }
 
-    getNameList () :string {
-        let namePr: string="";
+    getNameList () :Array<string> {
+        let namePr: string;
         this.products.forEach (
-            _product=> {namePr+=_product.getName()}
+            _product => {namePr+=_product.getName()}
         )
-        return namePr;
+        return [namePr]
     }
 
 
