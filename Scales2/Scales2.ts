@@ -52,7 +52,7 @@ class Scales {
     getSumScale (): number {
         let summ: number=0;
         this.products.forEach (
-            _product => {summ+=_product.getScale()}
+            (_product:IScalable) => {summ+=_product.getScale()}
         )
         return summ
     }
@@ -60,7 +60,7 @@ class Scales {
     getNameList () :Array<string> {
         let namePr: string[]=[];
         this.products.forEach (
-            _product => {[]=_product.getName()}
+            (_product:IScalable) => {[]=_product.getName()}
         )
         return namePr
     }
