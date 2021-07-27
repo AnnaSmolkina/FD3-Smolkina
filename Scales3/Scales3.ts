@@ -1,3 +1,27 @@
+interface IStorageEngine {
+
+    addItem():string;
+    getItem(): number;
+    getCount():number;
+
+ }
+// хранилище однородных (похожих) объектов произвольного 
+// класса StorageEngine, реализующего интерфейс IStorageEngine
+ class ScalesStorageEngineArray <StorageEngine extends IStorageEngine> {
+    
+    items:StorageEngine[];
+
+    constructor () {
+        this.items=[];
+    }
+
+ }
+
+ class ScalesStorageEngineLocalStorage <StorageEngine extends IStorageEngine> {
+
+    
+ }
+
 class Product {
     name: string;
     scale: number;
