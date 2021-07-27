@@ -36,12 +36,12 @@ class Scales {
         return summ
     }
 
-    getNameList () :Array<string> {
-        let namePr: string;
+    getNameList ():string[] {
+        let namePr: string[]=[];
         this.products.forEach (
-            _product => {namePr+=_product.getName()}
+            _product=> {[]=_product.getName()}
         )
-        return [namePr]
+        return namePr
     }
 
 
