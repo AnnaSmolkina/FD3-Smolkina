@@ -31,7 +31,7 @@ class Scales {
     getSumScale (): number {
         let summ: number=0;
         this.products.forEach (
-            (_product:Product) => {summ+=_product.getScale()}
+            _product => {summ+=_product.getScale()}
         )
         return summ
     }
@@ -39,7 +39,7 @@ class Scales {
     getNameList ():string[] {
         let namePr: string[]=[];
         this.products.forEach (
-            (_product:Product)=> {[]=_product.getName()}
+            _product=> {[]=_product.getName()}
         )
         return namePr
     }
