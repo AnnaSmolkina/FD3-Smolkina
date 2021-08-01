@@ -19,11 +19,7 @@ interface IStorageEngine {
     }
 
     getCount():number {
-        let count:number[]=[];
-        for (let index = 0; index < this.products.length; index++) {
-            return count[index];
-         }
-         return this.products.length;
+        return this.products.length;
      }
 
  }
@@ -45,12 +41,8 @@ interface IStorageEngine {
    }
 
    getCount():number {
-       let a:number[]=JSON.parse(localStorage.product);
-       for (let index = 0; index <this.products.length; index++) {
-            return a[index];
-        }
-        localStorage.product=JSON.stringify(a)
-       }
+    return this.products.length;
+   }
 
  }
 
