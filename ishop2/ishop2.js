@@ -36,14 +36,14 @@ var ishop2=React.createClass ( {
     },
 
     productClicked: function(EO) {
-        this.props.cbSelected(this.props.code);
+        this.props.cbSelected(EO.target.getatribute(code));
     },
 
 
     render: function () {
             var productRow=this.props.products.map(v  => 
                 React.createElement (ProductsGrid, {key: v.code, 
-                name:v.name, price:v.price, url:v.url, quantity:v.quantity, 
+                name:v.name, code:v.code, price:v.price, url:v.url, quantity:v.quantity, 
                 control:v.control,
                 cbSelected:this.productSelected,
                 selectedProductCode:this.state.selectedProductCode,

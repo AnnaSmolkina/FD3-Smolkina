@@ -13,7 +13,7 @@ var ProductsGrid=React.createClass ( {
     },
 
     productClicked: function(EO) {
-    this.props.cbSelected(this.props.code);
+      this.props.cbSelected(EO.target.code);
   },
 
     render: function () {
