@@ -27,7 +27,7 @@ interface IStorageEngine {
  class ScalesStorageEngineLocalStorage implements IStorageEngine  {
 
    LocalStorageKey:string = 'product';
-   products:Product[]=[];
+   
 
    addItem (item:Product):void {
        let a:Array<Product>=JSON.parse(localStorage.product);
@@ -41,7 +41,8 @@ interface IStorageEngine {
    }
 
    getCount():number {
-    return this.products.length;
+       let a:Array<Product>=JSON.parse(localStorage.product);
+       return a.length;
    }
 
  }
