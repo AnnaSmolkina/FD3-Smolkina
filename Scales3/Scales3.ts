@@ -30,7 +30,7 @@ interface IStorageEngine {
    
 
    addItem (item:Product):void {
-       let a:Array<Product>=JSON.parse(localStorage.product);
+       let a:Array<any>=JSON.parse(localStorage.product);
         a.push(item);
        localStorage.product=JSON.stringify(a)
    }
@@ -41,7 +41,7 @@ interface IStorageEngine {
    }
 
    getCount():number {
-       let a:Array<Product>=JSON.parse(localStorage.product);
+       let a:Array<any>=JSON.parse(localStorage.product);
        return a.length;
    }
 
