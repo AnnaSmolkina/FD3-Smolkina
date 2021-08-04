@@ -18,7 +18,7 @@ var ProductsGrid=React.createClass ( {
 
     render: function () {
         if (this.props.workMode===1) {
-            return React.DOM.tr ( {className: 'ISHOP2__PRODUCTLIST_PRODUCT', onClick:this.productClicked, value: this.props.cbSelected },
+            return React.DOM.tr ( {className: 'ISHOP2__PRODUCTLIST_PRODUCT', onClick:this.productClicked},
                    React.DOM.td ({className:'NAME'}, this.props.name),
                    React.DOM.td ({className:"PRICE"}, this.props.price),
                    React.DOM.td ({ className:"URL"}, this.props.url),

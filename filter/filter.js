@@ -1,5 +1,5 @@
-var filter=React.createClass ( {
-    displayName: "filter",
+var filterProject=React.createClass ( {
+    displayName: "filterProject",
     propTypes: {
         words: React.PropTypes.array.string.isRequired,
     },
@@ -20,12 +20,13 @@ var filter=React.createClass ( {
                     
                           
         return React.DOM.div ({className:'FILTER'},
-               React.DOM.div ({className:'FOLTER__INPUTS'},
+               React.createElement.div ({className:'FILTER__INPUTS'},
                   React.createElement.input (null, {type:"checkbox"}),
                   React.createElement.input ( null, {type: "text"}),
-                  React.createElement.input (null, {type:"button", value="сбросить"})
+                  React.createElement.input (null, {type:"button",  defaultValue:"сбросить"})
                ),
-               React.createElement.select ({className:"FILTER__WORDSLIST", })
+               React.createElement.select({className:"FILTER__WORDSLIST", multiple:true,defaultValue:this.props.words}, wordsFilterList)
+               
             
         );
       },
