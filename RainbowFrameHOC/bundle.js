@@ -974,11 +974,11 @@ var _withRainbowFrame2 = _interopRequireDefault(_withRainbowFrame);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
-var FramedFragment = _withRainbowFrame2.default;
+var FramedFragment = (0, _withRainbowFrame2.default)(colors)(_react.Fragment);
 
 _reactDom2.default.render(_react2.default.createElement(
   FramedFragment,
-  { colors: colors },
+  null,
   'Hello!'
 ), document.getElementById('container'));
 
