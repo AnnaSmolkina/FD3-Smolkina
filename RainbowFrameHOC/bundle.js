@@ -969,12 +969,10 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _withRainbowFrame = __webpack_require__(32);
 
-var _withRainbowFrame2 = _interopRequireDefault(_withRainbowFrame);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
-var FramedFragment = (0, _withRainbowFrame2.default)(colors)(_react.Fragment);
+var FramedFragment = (0, _withRainbowFrame.withRainbowFrame)(colors)(_react.Fragment);
 
 _reactDom2.default.render(_react2.default.createElement(
   FramedFragment,

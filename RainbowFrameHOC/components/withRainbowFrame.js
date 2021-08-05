@@ -12,4 +12,4 @@ Component=>props=> {
 
 
 
-export { withRainbowFrame};
+export {withRainbowFrame};
