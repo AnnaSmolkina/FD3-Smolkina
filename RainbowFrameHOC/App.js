@@ -10,7 +10,7 @@ let  FramedFragment=withRainbowFrame (colors) (Fragment);
 
 ReactDOM.render(
   
-  <FramedFragment >
+  <FramedFragment>
     Hello!
   </FramedFragment>
 , document.getElementById('container') );
