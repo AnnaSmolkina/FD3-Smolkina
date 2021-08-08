@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
-import Page_About from './Page_Contacts';
-import Page_Company from './Page_Company';
-import Page_Clients from './Page_Clients';
-import Page_Client from './Page_Client';
+import Page_Contacts from './Page_Contacts';
+import Page_Main from './Page_Main';
+import Page_Catalog from './Page_Catalog';
+import Page_ItemGroup from './Page_ItemGroup';
+import Page_Item from './Page_Item';
 
 class PagesRouter extends React.Component {
           
@@ -13,10 +14,12 @@ class PagesRouter extends React.Component {
 
     return (
       <div>
-        <Route path="/" exact component={Page_About} />
-        <Route path="/company" component={Page_Company} />
-        <Route path="/clients" component={Page_Clients} />
-        <Route path="/client/:clid" component={Page_Client} />
+        <Route path="/" exact component={Page_Main} />
+        <Route path="/catalog" component={Page_Catalog} />
+        <Route path="/itemGroup/:clid" component={Page_ItemGroup} />
+        <Route path="/item/:clid" component={Page_Item} />
+        <Route path="/contacts" component={Page_Contacts} />
+        
       </div>
     );
     

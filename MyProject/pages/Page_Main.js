@@ -11,7 +11,7 @@ class Page_Company extends React.PureComponent {
     return (
       <MobileCompany 
         name={appData.companyName}
-        clients={appData.clientsArr}
+        items={appData.itemsArr}
       />
     );
     
