@@ -1,25 +1,45 @@
 ﻿import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-import './ExampleComponent.css';
 
-class ExampleComponent extends React.PureComponent {
+import './Shini.css';
+
+class Shini extends React.PureComponent {
 
   static propTypes = {
-    //name: PropTypes.string.isRequired,
+    info:PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      seson: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      height: PropTypes.number.isRequired,
+      heightProfile: PropTypes.number.isRequired,
+      diameter: PropTypes.number.isRequired,
+      model: PropTypes.string.isRequired,
+      itemGroup: PropTypes.string.isRequired,
+      foto:  PropTypes.any.isRequired,
+    }),
   };
 
   render() {
-
+    let codeShini=this.props.info.map (shina =>
+      <ShiniItem key={shina.id} info={shina}/>)
+    
     return (
-      <div className="SExampleComponent">
-        Пример компонента
+      <div className='Item'>
+        <div className='Foto'>
+          {this.props.info.foto}
+        </div>
+        <h1 className='ItemName'>{this.props.info.name}</h1>
+        <div className='ItemInfo'>
+          {codeShini}
+        </div>
       </div>
-    )
-    ;
+    );
 
   }
 
 }
 
-export default ExampleComponent;
+export default Shini;
