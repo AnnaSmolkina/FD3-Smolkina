@@ -2,28 +2,26 @@
 import PropTypes from 'prop-types';
 
 
-import './Disk.css';
+import './Oil.css';
 
-class Disk extends React.PureComponent {
+class Oil extends React.PureComponent {
 
   static propTypes = {
     info:PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      width: PropTypes.number.isRequired,
-      diameter: PropTypes.number.isRequired,
+      structure: PropTypes.string.isRequired,
+      volume: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
       itemGroup: PropTypes.string.isRequired,
       foto:  PropTypes.any.isRequired,
     }),
   };
 
   render() {
-    let codeDisk=this.props.info.map (disk =>
-      <DiskItem key={disk.id} info={disk}/>)
+    let codeOils=this.props.info.map (oil =>
+      <OilsItem key={oil.id} info={oil}/>)
     
     return (
       <div className='Item'>
@@ -32,7 +30,7 @@ class Disk extends React.PureComponent {
         </div>
         <h1 className='ItemName'>{this.props.info.name}</h1>
         <div className='ItemInfo'>
-          {codeDisk}
+          {codeOils}
         </div>
       </div>
     );
@@ -41,4 +39,4 @@ class Disk extends React.PureComponent {
 
 }
 
-export default Disk;
+export default Oil;

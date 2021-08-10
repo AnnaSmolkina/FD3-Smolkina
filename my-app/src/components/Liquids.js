@@ -2,28 +2,25 @@
 import PropTypes from 'prop-types';
 
 
-import './Disk.css';
+import './Liquids.css';
 
-class Disk extends React.PureComponent {
+class Liquids extends React.PureComponent {
 
   static propTypes = {
     info:PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      width: PropTypes.number.isRequired,
-      diameter: PropTypes.number.isRequired,
+      volume: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
       itemGroup: PropTypes.string.isRequired,
       foto:  PropTypes.any.isRequired,
     }),
   };
 
   render() {
-    let codeDisk=this.props.info.map (disk =>
-      <DiskItem key={disk.id} info={disk}/>)
+    let codeLiquids=this.props.info.map (liquid =>
+      <LiquidsItem key={liquid.id} info={liquid}/>)
     
     return (
       <div className='Item'>
@@ -32,7 +29,7 @@ class Disk extends React.PureComponent {
         </div>
         <h1 className='ItemName'>{this.props.info.name}</h1>
         <div className='ItemInfo'>
-          {codeDisk}
+          {codeLiquids}
         </div>
       </div>
     );
@@ -41,4 +38,4 @@ class Disk extends React.PureComponent {
 
 }
 
-export default Disk;
+export default Liquids;
