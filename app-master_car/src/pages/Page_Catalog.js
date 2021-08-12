@@ -9,6 +9,7 @@ class Page_Catalog extends React.PureComponent {
     return (
       <Catalog>
         name={appData.companyName}
+        catalog={appData.itemsGroup}
         items={appData.itemsArr}
       </Catalog>
     );

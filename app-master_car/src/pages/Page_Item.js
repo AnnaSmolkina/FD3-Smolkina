@@ -1,22 +1,22 @@
 import React from 'react';
 
-import MobileClientInfo from '../components/MobileClientInfo';
+import ItemInfo from '../components/ItemInfo';
 
 import appData from '../appData';
 
-class Page_Client extends React.PureComponent {
+class Page_Item extends React.PureComponent {
           
   render() {
 
     // раз написано <Route path="/client/:clid" component={Page_Client} />
     // значит Page_Client получит то что в УРЛе после /client/ под именем props.match.params.clid в виде строки
-    let clientId=parseInt(this.props.match.params.clid);
+    let itemtId=parseInt(this.props.match.params.clid);
 
-    let clientData=appData.clientsArr.find( c => c.id==clientId );
+    let itemData=appData.itemsArr.find( c => c.id==itemtId );
 
     return (
-      <MobileClientInfo
-        info={clientData}
+      <ItemInfo
+        info={itemData}
       />
     );
     
@@ -24,5 +24,5 @@ class Page_Client extends React.PureComponent {
 
 }
     
-export default Page_Client;
+export default Page_Item;
     

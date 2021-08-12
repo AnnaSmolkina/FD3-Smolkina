@@ -9,6 +9,7 @@ class Page_Main extends React.PureComponent {
     return (
       <MasterCar>
         name={appData.companyName}
+        catalog={appData.itemsGroup}
         items={appData.itemsArr}
       </MasterCar>
     );

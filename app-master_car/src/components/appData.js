@@ -1,6 +1,7 @@
 
  data={
     companyName:'MasterCar',
+    imemsGroup:['Автомобильные диски', 'Шины', 'Технические жидкости для автомобиля', 'Моторное масло'],
     itemsArr:[ 
         [
             {id: 101, name:"Диск литой", price:100, type:"литой", width:6, diameter:15, model:"Alcasta15", color:"MBRS", itemGroup:"Колесные диски", foto:<img src="/assets/img/diski/alcasta1.jpeg" alt="foto"/>},
