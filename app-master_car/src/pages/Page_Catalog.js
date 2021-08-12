@@ -1,23 +1,20 @@
 import React from 'react';
-
-import MasterCar from '../components/MasterCar';
-
 import appData from '../appData';
+import Catalog from '../components/Catalog';
 
-class Page_Main extends React.PureComponent {
+class Page_Catalog extends React.PureComponent {
           
   render() {
 
     return (
-      <MasterCar 
+      <Catalog>
         name={appData.companyName}
         items={appData.itemsArr}
-      />
+      </Catalog>
     );
     
   }
 
 }
     
-export default Page_Main;
-    
+export default Page_Catalog;

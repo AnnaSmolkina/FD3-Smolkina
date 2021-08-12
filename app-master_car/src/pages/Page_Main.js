@@ -1,23 +1,21 @@
 import React from 'react';
-
-import MobileCompany from '../components/MobileCompany';
-
+import MasterCar from '../components/MasterCar';
 import appData from '../appData';
 
-class Page_Company extends React.PureComponent {
+class Page_Main extends React.PureComponent {
           
   render() {
 
     return (
-      <MobileCompany 
+      <MasterCar>
         name={appData.companyName}
         items={appData.itemsArr}
-      />
+      </MasterCar>
     );
     
   }
 
 }
     
-export default Page_Company;
+export default Page_Main;
     
