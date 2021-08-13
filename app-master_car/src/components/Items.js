@@ -6,7 +6,7 @@ import LiquidsGroup from './LiquidsGroup';
 import OilGroup from './OilGroup';
 
 
-class ItemGroup extends React.PureComponent {
+class Items extends React.PureComponent {
   static propTypes = {
     info:PropTypes.shape({
       itemGroup: PropTypes.string.isRequired,
@@ -43,7 +43,7 @@ class ItemGroup extends React.PureComponent {
   }
 }
 
-export default ItemGroup;
+export default Items;
 
 
 
