@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Items from './Items'
-import appData from '../appData';
+import Items from './components/Items'
+import appData from '../components/appData';
 
 class Page_ItemGroup extends React.PureComponent {
           

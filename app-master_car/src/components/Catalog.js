@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import ItemGroup from './ItemGroup';
+import Items from './Items';
 
 
 
@@ -8,7 +8,7 @@ class Catalog extends React.PureComponent {
   render() {
     return (
 
-      <ItemGroup/>
+      <Items/>
   
     );
 

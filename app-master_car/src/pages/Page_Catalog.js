@@ -1,5 +1,5 @@
 import React from 'react';
-import appData from '../appData';
+import appData from '../components/appData';
 import Catalog from '../components/Catalog';
 
 class Page_Catalog extends React.PureComponent {

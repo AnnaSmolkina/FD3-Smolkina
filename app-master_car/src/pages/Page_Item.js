@@ -2,7 +2,7 @@ import React from 'react';
 
 import ItemInfo from '../components/ItemInfo';
 
-import appData from '../appData';
+import appData from '../components/appData';
 
 class Page_Item extends React.PureComponent {
           
