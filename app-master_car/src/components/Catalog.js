@@ -1,18 +1,15 @@
 ﻿import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import ItemGroup from './ItemGroup';
+
 
 
 class Catalog extends React.PureComponent {
-
- 
-
+  
   render() {
     return (
-      <Shini>
-         
-      </Shini>
-      
+
+      <ItemGroup/>
+  
     );
 
   }

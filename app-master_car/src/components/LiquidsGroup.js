@@ -21,7 +21,7 @@ class LiquidsGroup extends React.PureComponent {
   render() {
     let codeLiquids=this.props.info.map (liquid =>
       <LiquidItem key={liquid.id} info={liquid}>
-        <NavLink to={"/item/"+this.props.info.id} className="Item">{codeLiquids}</NavLink>
+        <NavLink to={"/item/"+this.props.info.id} className="ItemGroup">{liquid}</NavLink>
       </LiquidItem>)
     
     return (

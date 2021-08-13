@@ -8,13 +8,13 @@ class Liquids extends React.PureComponent {
 
   static propTypes = {
     info:PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      volume: PropTypes.string.isRequired,
-      model: PropTypes.string.isRequired,
-      itemGroup: PropTypes.string.isRequired,
-      foto:  PropTypes.any.isRequired,
+       id: PropTypes.number.isRequired,
+       name: PropTypes.string.isRequired,
+       price: PropTypes.number.isRequired,
+       volume: PropTypes.string.isRequired,
+       model: PropTypes.string.isRequired,
+       itemGroup: PropTypes.string.isRequired,
+       foto:  PropTypes.any.isRequired,
     }),
   };
 

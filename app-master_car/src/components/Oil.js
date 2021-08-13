@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 
-import './Oil.css';
+import './ItemStyle.css';
 
 class Oil extends React.PureComponent {
 

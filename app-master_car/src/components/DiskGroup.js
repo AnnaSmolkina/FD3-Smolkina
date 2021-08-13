@@ -24,7 +24,7 @@ class DiskGroup extends React.PureComponent {
   render() {
     let codeDisk=this.props.info.map (disk =>
       <DiskItem key={disk.id} info={disk}>
-        <NavLink to={"/item/"+this.props.info.id} className="Item">{codeDisk}</NavLink>
+        <NavLink to={"/item/"+this.props.info.id} className="Item">{disk}</NavLink>
       </DiskItem>)
     
     return (

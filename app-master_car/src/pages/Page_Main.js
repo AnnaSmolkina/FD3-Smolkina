@@ -1,6 +1,6 @@
 import React from 'react';
 import MasterCar from '../components/MasterCar';
-import appData from '../appData';
+import appData from '../components/appData';
 
 class Page_Main extends React.PureComponent {
           
