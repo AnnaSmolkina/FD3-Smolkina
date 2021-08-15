@@ -6,7 +6,7 @@ import Liquids from './Liquids';
 import Oil from './Oil';
 
 
-import './ItemStyle.css';
+
 
 class ItemInfo extends React.PureComponent {
 
@@ -33,13 +33,10 @@ class ItemInfo extends React.PureComponent {
         
     return (
       <div className='Item'>
-        <div className='Foto'>
-          {this.props.info.foto}
-        </div>
-        <h1 className='ItemName'>{this.props.info.name}</h1>
-        <div className='ItemInfo'>
-          {this.props.price}
-        </div>
+        <Disk/>
+        <Shini/>
+        <Liquids/>
+        <Oil/>
       </div>
     );
 

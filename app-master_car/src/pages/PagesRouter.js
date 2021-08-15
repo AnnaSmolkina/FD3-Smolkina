@@ -17,7 +17,7 @@ class PagesRouter extends React.Component {
         <Route path="/" exact component={Page_Main} />
         <Route path="/catalog" component={Page_Catalog} />
         <Route path="/itemGroup/:clid" component={Page_ItemGroup} />
-        <Route path="/item/:clid" component={Page_Item} />
+        <Route path="/itemGroup/item/:clid" component={Page_Item} />
         <Route path="/contacts" component={Page_Contacts} />
         
       </div>

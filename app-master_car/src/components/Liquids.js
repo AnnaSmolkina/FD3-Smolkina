@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 
 
-import './Liquids.css';
 
 class Liquids extends React.PureComponent {
 
@@ -20,7 +19,7 @@ class Liquids extends React.PureComponent {
 
   render() {
     let codeLiquids=this.props.info.map (liquid =>
-      <LiquidsItem key={liquid.id} info={liquid}/>)
+      <div key={liquid.id} info={liquid}/>)
     
     return (
       <div className='Item'>

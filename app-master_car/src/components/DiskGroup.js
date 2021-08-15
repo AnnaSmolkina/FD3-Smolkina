@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 import './ItemGroupStyle.css';
+import Disk from './Disk';
 
 class DiskGroup extends React.PureComponent {
 
@@ -23,9 +24,9 @@ class DiskGroup extends React.PureComponent {
 
   render() {
     let codeDisk=this.props.info.map (disk =>
-      <DiskItem key={disk.id} info={disk}>
+      <Disk key={disk.id} info={disk}>
         <NavLink to={"/item/"+this.props.info.id} className="Item">{disk}</NavLink>
-      </DiskItem>)
+      </Disk>)
     
     return (
       <div className='ItemGroup'>

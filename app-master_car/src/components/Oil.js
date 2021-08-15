@@ -21,7 +21,7 @@ class Oil extends React.PureComponent {
 
   render() {
     let codeOils=this.props.info.map (oil =>
-      <OilsItem key={oil.id} info={oil}/>)
+      <div key={oil.id} info={oil}/>)
     
     return (
       <div className='Item'>

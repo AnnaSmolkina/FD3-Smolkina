@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 
-import './Disk.css';
+
 
 class Disk extends React.PureComponent {
 
@@ -23,7 +23,7 @@ class Disk extends React.PureComponent {
 
   render() {
     let codeDisk=this.props.info.map (disk =>
-      <DiskItem key={disk.id} info={disk}/>)
+      <div key={disk.id} info={disk}/>)
     
     return (
       <div className='Item'>

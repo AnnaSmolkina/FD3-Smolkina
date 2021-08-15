@@ -24,7 +24,7 @@ class Shini extends React.PureComponent {
 
   render() {
     let codeShini=this.props.info.map (shina =>
-      <ShiniItem key={shina.id} info={shina}/>)
+      <div key={shina.id} info={shina}/>)
     
     return (
       <div className='Item'>
