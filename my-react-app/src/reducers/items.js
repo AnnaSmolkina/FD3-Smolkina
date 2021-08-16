@@ -1,20 +1,26 @@
 const initialState={
     isReady:false,
-    cnt: null,
+    tire: null,
+    filterBy:'all'
     
 };
 
 export default (state=initialState, action) => {
 
     switch (action.type) {
-        case 'SET_ITEM':{
+        case 'SET_ITEM':
             return {
                 ...state,
-                cnt: action.payload,
-                isReady:true,
-                
-            }
-        };
+                tire: action.payload,
+                isReady:true
+            };
+        case 'SET_FILTER':
+             return {
+                ...state,
+                filterBy: action.payload,
+                isReady:true
+            };
+                  
         case 'SET_IS_READY':{
             return {
                 ...state,

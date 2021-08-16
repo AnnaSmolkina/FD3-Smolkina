@@ -1,11 +1,10 @@
 import { Component } from 'react';
-import {connect} from 'react-redux';
 import { Container } from 'semantic-ui-react';
-import {setItems} from './actions/items';
 import axios from 'axios';
-import Menu from './components/Menu';
-import ItemCard from './components/ItemCard';
+import Menu from './Menu';
+import ItemCard from './ItemCard';
 import { Card } from 'semantic-ui-react';
+import MenuFilter from '../containers/Filter';
 
 
 class App extends Component {
@@ -18,10 +17,11 @@ class App extends Component {
   }
 
   render(){
-    const {items, isReady}=this.props;
+    const {items, isReady, setFilter}=this.props;
     return (
       <Container>
        <Menu/>
+       <MenuFilter setFilter={setFilter}/>
        <Card.Group itemsPerRow={4}>
        { !isReady
           ? 'Загрузка...' 
@@ -35,14 +35,6 @@ class App extends Component {
   }
  };
 
-const mapStateToProps=({items})=>({
-  items:items.shina,
-  isReady:items.shina
 
-});
 
-const mapDispatchToProps=dispatch=>({
-  setItems:items=>dispatch(setItems(items))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

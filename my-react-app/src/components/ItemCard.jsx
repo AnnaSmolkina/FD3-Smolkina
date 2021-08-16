@@ -17,6 +17,6 @@ const ItemCard = ({name, model,price,foto }) => (
       </a>
     </Card.Content>
   </Card>
-)
+);
 
 export default ItemCard;

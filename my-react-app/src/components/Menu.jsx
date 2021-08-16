@@ -1,31 +1,44 @@
-import React from "react";
-import { Menu } from 'semantic-ui-react';
+import React, { Component } from 'react'
+import { Menu } from 'semantic-ui-react'
 
-const MenuComponent =( ()=> (
- <Menu>
-    <Menu.Item
-      name='browse'
-      onClick={this.handleItemClick}>
+export default class MenuComponent extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <Menu>
+        <Menu.Item
+          name='browse'
+          active={activeItem === 'browse'}
+          onClick={this.handleItemClick}
+        >
           Магазин товаров для автомобилей
-    </Menu.Item>
+        </Menu.Item>
 
-    <Menu.Menu position='right'>
-    <Menu.Item
-        name='signup'
         
-        onClick={this.handleItemClick}>
-         Итого: <b>0</b> руб.
-    </Menu.Item>
+        <Menu.Menu position='right'>
+          <Menu.Item
+            name='signup'
+            active={activeItem === 'signup'}
+            onClick={this.handleItemClick}
+          >
+             Итого:&nbsp; <b>0</b>&nbsp; руб.
+          </Menu.Item>
 
-    <Menu.Item
-        name='help'
-       
-        onClick={this.handleItemClick}>
-        Корзина &nbsp; (<b>0</b>)
-      </Menu.Item>
-    </Menu.Menu>
-  </Menu>
-));
-
-export default MenuComponent;
+          <Menu.Item
+            name='help'
+            active={activeItem === 'help'}
+            onClick={this.handleItemClick}
+          >
+            Корзина &nbsp; (<b>0</b>)
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
+    )
+  }
+}
 

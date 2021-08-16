@@ -1,5 +1,5 @@
 const initialState={
-    item:[]
+    tires:[]
     
 };
 
@@ -9,8 +9,8 @@ export default (state=initialState, action) => {
         case 'ADD_ITEM':{
             return {
                 ...state,
-                item: [
-                    ...state.item,
+                tires: [
+                    ...state.tires,
                     action.payload
                 ]
             }
@@ -18,11 +18,9 @@ export default (state=initialState, action) => {
         case 'REMOVE_ITEM':{
             return {
                 ...state,
-                item: state.item.filter(n=>n.id != action.payload)
-            
-            }
+                tires: state.tires.filter(n=>n.id != action.payload)
+                }
         };
-        
         default:
             return state;
     }
