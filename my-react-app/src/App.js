@@ -25,7 +25,7 @@ class App extends Component {
        <Card.Group itemsPerRow={4}>
        { !isReady
           ? 'Загрузка...' 
-          :items.map(item=><ItemCard {...item}/>)}
+          :items.map((item, i)=> <ItemCard key={i} {...item}/>)}
        </Card.Group>
         
       

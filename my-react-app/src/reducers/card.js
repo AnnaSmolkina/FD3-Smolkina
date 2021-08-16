@@ -1,24 +1,25 @@
 const initialState={
-    isReady:false,
-    cnt: null,
+    item:[]
     
 };
 
 export default (state=initialState, action) => {
 
     switch (action.type) {
-        case 'SET_ITEM':{
+        case 'ADD_ITEM':{
             return {
                 ...state,
-                cnt: action.payload,
-                isReady:true,
-                
+                item: [
+                    ...state.item,
+                    action.payload
+                ]
             }
         };
-        case 'SET_IS_READY':{
+        case 'REMOVE_ITEM':{
             return {
                 ...state,
-                isReady:action.payload
+                item: state.item.filter(n=>n.id != action.payload)
+            
             }
         };
         
@@ -26,4 +27,3 @@ export default (state=initialState, action) => {
             return state;
     }
 };
-
