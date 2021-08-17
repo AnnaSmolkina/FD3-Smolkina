@@ -1,9 +1,12 @@
-import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Card, Icon, Image, Button } from 'semantic-ui-react';
 
-const ItemCard = ({name, model,price,foto }) => (
-  <Card>
-    <Image src={foto}/>
+const ItemCard = item => {
+  const {name,price, model,foto, addToCard, addedCount}=item;
+ 
+  return (
+   <Card>
+      <Image src={foto}/>
     <Card.Content>
       <Card.Header>{name}</Card.Header>
       <Card.Meta>
@@ -11,12 +14,16 @@ const ItemCard = ({name, model,price,foto }) => (
       </Card.Meta>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      
         <Icon name='rub' />
         {price}
-      </a>
+      
     </Card.Content>
+    <Button onClick={addToCard.bind(this, item)} >
+      Добавить в корзину {addedCount>0 && `(${addedCount})`}
+    </Button>
   </Card>
-);
+  );
+}; 
 
 export default ItemCard;

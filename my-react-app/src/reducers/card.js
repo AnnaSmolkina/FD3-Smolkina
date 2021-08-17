@@ -1,12 +1,12 @@
 const initialState={
-    tires:[]
+    tires: []
     
 };
 
 export default (state=initialState, action) => {
 
     switch (action.type) {
-        case 'ADD_ITEM':{
+        case 'ADD_TO_CARD':{
             return {
                 ...state,
                 tires: [
@@ -15,7 +15,7 @@ export default (state=initialState, action) => {
                 ]
             }
         };
-        case 'REMOVE_ITEM':{
+        case 'REMOVE_FROM_CARD':{
             return {
                 ...state,
                 tires: state.tires.filter(n=>n.id != action.payload)

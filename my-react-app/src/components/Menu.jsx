@@ -1,44 +1,41 @@
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import React from 'react';
+import { Menu,Popup, List, Button, Image, ListContent, ListItem, MenuItem, MenuMenu } from 'semantic-ui-react';
 
-export default class MenuComponent extends Component {
-  state = {}
+const CardComponent=({name, id, foto, removeFromCard})=> (
+  <List selection divided verticalAlign='middle'>
+    <ListItem>
+      <ListContent floated='right'>
+        <Button onClick={removeFromCard.bind(this,id)} color ='red'>Удалить</Button>
+      </ListContent>
+      <Image avatar scr={foto}/>
+      <ListContent>{name} </ListContent>
+    </ListItem>
+  </List>
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+);
 
-  render() {
-    const { activeItem } = this.state
+const MenuComponent=({totalPrice,count,tires})=> (
+  <Menu>
+    <MenuItem name='browse'>
+      Подбор шин для вашего автомобиля
+    </MenuItem>
+    <MenuMenu position='right'>
+      <MenuItem name='signup'>
+        Итого:&nbsp;<b>{totalPrice}</b>&nbsp; руб.
+      </MenuItem>
 
-    return (
-      <Menu>
-        <Menu.Item
-          name='browse'
-          active={activeItem === 'browse'}
-          onClick={this.handleItemClick}
-        >
-          Магазин товаров для автомобилей
-        </Menu.Item>
+      <Popup
+       trigger={
+         <MenuItem name='help'>
+           Корзина &nbsp; (<b>{count}</b>)
+         </MenuItem>
+       }
+       content={tires.map(item=>(
+         <CardComponent{... item}/>
+       ))}
+       on='click' hideOnscroll/>
+    </MenuMenu>
+  </Menu>
+);
 
-        
-        <Menu.Menu position='right'>
-          <Menu.Item
-            name='signup'
-            active={activeItem === 'signup'}
-            onClick={this.handleItemClick}
-          >
-             Итого:&nbsp; <b>0</b>&nbsp; руб.
-          </Menu.Item>
-
-          <Menu.Item
-            name='help'
-            active={activeItem === 'help'}
-            onClick={this.handleItemClick}
-          >
-            Корзина &nbsp; (<b>0</b>)
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
-    )
-  }
-}
-
+export default MenuComponent;

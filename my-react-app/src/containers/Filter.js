@@ -4,8 +4,8 @@ import *as filterActions from '../actions/filter';
 import Filter from '../components/Filter';
 
 
-const mapStateToProps=({items})=>({
-    filterBy: items.filterBy,
+const mapStateToProps=({items,filter})=>({
+    filterBy: filter.filterBy,
   });
   
   const mapDispatchToProps=dispatch=>({
