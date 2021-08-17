@@ -3,9 +3,9 @@ import logger from 'redux-logger';
 import rootReduser from './reducers';
 
 
-export default ()=> { 
+ const storeApp= ()=> { 
   const store=createStore(rootReduser, applyMiddleware(logger));
   return store;
 };
 
-
+export default storeApp;

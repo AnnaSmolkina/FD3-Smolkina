@@ -3,7 +3,7 @@ const initialState={
     tires: null,   
 };
 
-export default (state=initialState, action) => {
+const itemsRecucer= (state=initialState, action) => {
 
     switch (action.type) {
         case 'SET_ITEMS':
@@ -13,15 +13,15 @@ export default (state=initialState, action) => {
                 isReady:true
             };
         
-        case 'SET_IS_READY':{
+        case 'SET_IS_READY':
             return {
                 ...state,
                 isReady:action.payload
-            }
-        };
+            };
         
         default:
             return state;
     }
 };
 
+  export default itemsRecucer;

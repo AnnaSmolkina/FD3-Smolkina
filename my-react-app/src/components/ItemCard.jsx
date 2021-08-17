@@ -6,8 +6,10 @@ const ItemCard = item => {
  
   return (
    <Card>
-      <Image src={foto}/>
-    <Card.Content>
+     <div className='card-image'>
+        <Image src={foto}/>
+     </div>
+     <Card.Content>
       <Card.Header>{name}</Card.Header>
       <Card.Meta>
         <span className='date'>{model}</span>

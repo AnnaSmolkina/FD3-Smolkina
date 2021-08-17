@@ -4,7 +4,7 @@ const initialState={
 
 };
 
-export default (state=initialState, action) => {
+ const filterReducer= (state=initialState, action) => {
 
     switch (action.type) {
         case 'SET_QUERY':
@@ -23,3 +23,5 @@ export default (state=initialState, action) => {
             return state;
     }
 };
+
+export default filterReducer;

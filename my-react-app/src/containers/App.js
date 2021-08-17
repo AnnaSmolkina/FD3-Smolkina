@@ -6,6 +6,7 @@ import  orderBy from 'lodash/orderBy';
 
 
 const sortBy=(items, filterBy )=> {
+  
   switch (filterBy) {
     case 'price_high':
       return orderBy(items, 'price', 'desc');
@@ -21,13 +22,11 @@ const sortBy=(items, filterBy )=> {
     
   }
 };
-
- const filterItems=(items,searchQuery) =
-   items.filter (c=>
-      c.name.toLowerCase().indexOf(searchQuery.toLowerCase()) >=0 ||
-      c.seson.toLowerCase().indexOf(searchQuery.toLowerCase()) >=0,
-   );
-
+ 
+const filterItems=(items,searchQuery) =>
+  items.filter (
+   obj=>
+    obj.name.toLowerCase().indexOf(searchQuery.toLowerCase()) >=0);
   
   
 const searchItems=(items, filterBy, searchQuery)=> {
@@ -35,8 +34,7 @@ const searchItems=(items, filterBy, searchQuery)=> {
 }
 
 const mapStateToProps=({items,filter})=>({
-    items:
-    items.tires && searchItems(items.tires, filter.filterBy,filter.searchQuery),
+    items: items.tires && searchItems(items.tires, filter.filterBy,filter.searchQuery),
     isReady:items.isReady
   });
   
