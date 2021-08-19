@@ -1,40 +1,50 @@
-import React from 'react';
-import { Menu,Popup, List, Button, Image, ListContent, ListItem, MenuItem, MenuMenu } from 'semantic-ui-react';
+import React from "react";
+import { Menu, Popup, List, Button, Image,Input } from "semantic-ui-react";
 
-const CardComponent=({name, id, foto, removeFromCard})=> (
-  <List selection divided verticalAlign='middle'>
-    <ListItem>
-      <ListContent floated='right'>
-        <Button onClick={removeFromCard.bind(this,id)} color ='red'>Удалить</Button>
-      </ListContent>
-      <Image avatar scr={foto}/>
-      <ListContent>{name} </ListContent>
-    </ListItem>
+const CartComponent = ({ name, id, foto, removeFromCart }) => (
+  <List selection divided verticalAlign="middle">
+    <List.Item>
+      <List.Content floated="right">
+        <Button onClick={removeFromCart.bind(this, id)} color="red">
+          Удалить
+        </Button>
+      </List.Content>
+      <Image avatar src={foto} />
+      <List.Content>{name}</List.Content>
+    </List.Item>
   </List>
-
 );
 
-const MenuComponent=({totalPrice,count,tires})=> (
+const MenuComponent = ({ totalPrice, count, items, searchQuery, setSearchQuery }) => (
   <Menu>
-    <MenuItem name='browse'>
-      Подбор шин для вашего автомобиля
-    </MenuItem>
-    <MenuMenu position='right'>
-      <MenuItem name='signup'>
-        Итого:&nbsp;<b>{totalPrice}</b>&nbsp; руб.
-      </MenuItem>
+    <Menu.Item name="browse">Подбор товаров для вашего автомобиля</Menu.Item>
+    <Menu.Item >
+      <Input
+        icon="search"
+        onChange={e => setSearchQuery(e.target.value)}
+        value={searchQuery}
+        placeholder="Введите запрос..."
+      />
+     </Menu.Item>
 
-      <Popup
-       trigger={
-         <MenuItem name='help'>
-           Корзина &nbsp; (<b>{count}</b>)
-         </MenuItem>
-       }
-       content={tires.map(item=>(
-         <CardComponent{... item}/>
-       ))}
-       on='click' hideOnscroll/>
-    </MenuMenu>
+    <Menu.Menu position="right">
+      <Menu.Item name="signup">
+        Итого: &nbsp; <b>{totalPrice}</b>&nbsp;руб.
+      </Menu.Item>
+
+      <Popup 
+        trigger={
+          <Menu.Item name="help">
+            Корзина (<b>{count}</b>)
+          </Menu.Item>
+        }
+        content={items.map((item,i) => (
+          <CartComponent key={i} {...item} />
+        ))}
+        on="click"
+        hideOnScroll
+      />
+    </Menu.Menu>
   </Menu>
 );
 
