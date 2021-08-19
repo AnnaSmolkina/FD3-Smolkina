@@ -1,7 +1,7 @@
 const initialState = {
   isReady: false,
-  products: null
-};
+  products: null,
+ };
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -16,6 +16,7 @@ export default (state = initialState, action) => {
         ...state,
         isReady: action.payload
       };
+      
     default:
       return state;
   }

@@ -1,7 +1,7 @@
 import React from 'react';
-import {  Menu } from 'semantic-ui-react';
+import {  Menu, Input } from 'semantic-ui-react';
 
-const Filter = ({ setFilter, filterBy }) => (
+const Filter = ({ setFilter, filterBy, searchQuery, setSearchQuery }) => (
   <Menu secondary>
     <Menu.Item
       active={filterBy === 'all'}
@@ -28,7 +28,14 @@ const Filter = ({ setFilter, filterBy }) => (
       onClick={setFilter.bind(this, 'itemGroupOils')}>
       Масла
     </Menu.Item>
-    
+    <Menu.Item >
+      <Input
+        icon="search"
+        onChange={e => setSearchQuery(e.target.value)}
+        value={searchQuery}
+        placeholder="Введите запрос..."
+      />
+     </Menu.Item>
     
   </Menu>
 );

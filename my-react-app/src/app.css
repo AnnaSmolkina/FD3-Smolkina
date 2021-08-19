@@ -21,12 +21,11 @@ body {
  
 .App-header {  
   display: flex; 
-  display: flex; 
   flex-direction: row; 
   background-color:  #1B191E; 
   font-family: 'Times', serif; 
   font-style: normal; 
-  font-size: 18px; 
+  font-size: 1.25vw; 
   text-align: left;          
   color: white;
   height: 100px;
@@ -36,7 +35,7 @@ body {
 #app-header_1  {
   flex: 0 0 100px; 
   margin: 2px; 
-  font-size: 30px; 
+  font-size: 3vw; 
   font-weight: bold;
   padding-left: 110px;
   
@@ -65,9 +64,10 @@ body {
   grid-template-rows: 1fr 50px; 
   background-color:  #1B191E; 
   font-family: 'Times', serif; 
-  font-style: normal; font-size: 18px;
+  font-style: normal; 
+  font-size: 1.25vw;
   color: white;
-  margin-top: -10px;
+  margin-top: 10px;
   padding-top: 30px;
  }
 
@@ -75,7 +75,8 @@ body {
 #footer_1  {
   grid-column: 2; 
   grid-row: 1; 
-  font-size: 30px; font-weight: bold;
+  font-size: 2vw; 
+  font-weight: bold;
   text-align: center;   
   }
    
@@ -113,10 +114,9 @@ span {
 }
 .Page { 
   position: absolute;
-  
   top:20%;
   left: 30%;
-  width: 600px; 
+  width: 40%; 
   font-family:  'Times', serif; 
   font-weight: bold;
   text-align: center; 
@@ -127,11 +127,11 @@ span {
   margin: 0px; 
   padding: 5px;
   color:#FF6600;
-  font-size: 30px; 
+  font-size: 2vw; 
   letter-spacing: 2px;
   } 
 #TEXT2 { 
-  font-size: 40px;  
+  font-size: 2vw;  
   } 
 
 .modalbox {
@@ -159,7 +159,7 @@ span {
 
 #Foto1 {
   float:left;
-  width:5vw;
+  width:20%;
   border-radius: 20px;
 }
 .forLinks {

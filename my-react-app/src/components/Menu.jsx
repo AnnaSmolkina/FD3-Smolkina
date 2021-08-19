@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Popup, List, Button, Image,Input } from "semantic-ui-react";
+import { Menu, Popup, List, Button, Image} from "semantic-ui-react";
 
 const CartComponent = ({ name, id, foto, removeFromCart }) => (
   <List selection divided verticalAlign="middle">
@@ -15,19 +15,10 @@ const CartComponent = ({ name, id, foto, removeFromCart }) => (
   </List>
 );
 
-const MenuComponent = ({ totalPrice, count, items, searchQuery, setSearchQuery }) => (
+const MenuComponent = ({ totalPrice, count, items }) => (
   <Menu>
     <Menu.Item name="browse">Подбор товаров для вашего автомобиля</Menu.Item>
-    <Menu.Item >
-      <Input
-        icon="search"
-        onChange={e => setSearchQuery(e.target.value)}
-        value={searchQuery}
-        placeholder="Введите запрос..."
-      />
-     </Menu.Item>
-
-    <Menu.Menu position="right">
+     <Menu.Menu position="right">
       <Menu.Item name="signup">
         Итого: &nbsp; <b>{totalPrice}</b>&nbsp;руб.
       </Menu.Item>
