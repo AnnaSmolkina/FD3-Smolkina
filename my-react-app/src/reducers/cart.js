@@ -2,6 +2,7 @@ const initialState = {
   products: []
 };
 
+// eslint-disable-next-line
 export default (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TO_CART":

@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, Image, Icon, Button, Header, Modal } from 'semantic-ui-react';
 
 const ItemCard = item => {
-  const { name, itemGroupTire,itemGroupDisk,itemGroupLiquids, itemGroupOils, price, foto, addToCart, addedCount,type,width,diameter,color } = item;
+  const { name, itemGroupTire,itemGroupDisk,itemGroupLiquids, itemGroupOils, price, foto, addToCart, addedCount,
+         type,width, diameter,seson, height, heightProfile, structure,color, volume, model } = item;
   const [open, setOpen] = React.useState(false);
   return (
     <Card>
@@ -16,10 +17,10 @@ const ItemCard = item => {
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <a>
+      
           <Icon name='money' />
           {price}&nbsp;бел.руб.
-        </a>
+      
       </Card.Content>
       <Modal
       onClose={() => setOpen(false)}
@@ -33,7 +34,17 @@ const ItemCard = item => {
         <Image size='medium' src={foto} wrapped />
         <Modal.Description>
           <Header>Характеристики</Header>
-          {type}<br/>{width}<br/>{diameter}<br/>{color}<br/>
+            {type}<br/>
+            {seson}<br/>
+            {width}<br/>
+            {diameter}<br/>
+            {height}<br/>
+            {heightProfile}<br/>
+            {structure}<br/>
+            {volume}<br/>
+            {color}<br/>
+            {model}<br/>
+
          </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
@@ -45,8 +56,8 @@ const ItemCard = item => {
           labelPosition='right'
           icon='checkmark'
           onClick={addToCart.bind(this, item)}
-          positive          
-        />
+          positive
+         />
       </Modal.Actions>
     </Modal>
         <Button onClick={addToCart.bind(this, item)} color='green'>

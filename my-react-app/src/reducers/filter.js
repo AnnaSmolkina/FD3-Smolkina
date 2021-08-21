@@ -2,7 +2,7 @@ const initialState = {
   searchQuery: '',
   filterBy: 'all',
 };
-
+// eslint-disable-next-line
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'SET_QUERY':
