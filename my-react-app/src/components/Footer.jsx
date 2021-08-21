@@ -1,6 +1,5 @@
 ﻿// eslint-disable-next-line
-import React from 'react';
-
+import React from "react";
 
 class Footer extends React.PureComponent {
  
